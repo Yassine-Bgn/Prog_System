@@ -1,4 +1,12 @@
-all : $(APPLI) clean
+OBJETS = usecompelx.o compelx.o
 
-$(APPLI) : $(APPLI).o 
-	gcc -Wall $(APPLI).o 
+C = gcc
+
+CFLAGS = -Wall -g
+
+finalcomplex3 : $(OBJETS)
+	$(C) $(CFLAGS) $(OBJETS) -o finalcomplex3 -lm
+usecompelx.o : usecompelx.c compelx.h
+	$(C) -c usecompelx.c
+compelx.o : compelx.c compelx.h
+	$(C) -c compelx.c
