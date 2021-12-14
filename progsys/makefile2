@@ -1,0 +1,4 @@
+all : $(APPLI) clean
+
+$(APPLI) : $(APPLI).o 
+	gcc -Wall $(APPLI).o 
