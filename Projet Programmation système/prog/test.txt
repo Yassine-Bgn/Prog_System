@@ -1,0 +1,3 @@
+dup() et dup2() créent une copie du descripteur de fichier oldfd.
+Après un appel réussi à dup() ou dup2(), l'ancien et le nouveau descripteurs peuvent être utilisés de manière interchangeable. Ils font référence à la même description de fichier ouvert (voir open(2)) et
+ainsi partagent les pointeurs de position et les drapeaux. Par exemple, si le pointeur de position est modifié en utilisant lseek (2) sur l'un des descripteurs, la position est également changée pour l'autre.
