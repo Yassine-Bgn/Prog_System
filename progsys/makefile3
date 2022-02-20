@@ -1,6 +1,0 @@
-finalcomplex2 : usecompelx.o compelx.o
-	gcc -Wall -lm usecompelx.o compelx.o -o finalcomplex2
-usecompelx.o : usecompelx.c compelx.h
-	gcc -Wall -c usecompelx.c
-compelx.o : compelx.c conpelx.h
-	gcc -Wall -c compelx.c
